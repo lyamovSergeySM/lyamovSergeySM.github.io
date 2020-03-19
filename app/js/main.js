@@ -156,7 +156,8 @@ $(function() {
 	})
 
 	//переход на страницу коллекции
-	$(".client-form").on('submit', function(){
+	$(".client-form").on('submit', function(e){
+		e.preventDefault();
 		$(location).attr('href', "https://lyamovsergeysm.github.io/app/collections.html");
 	})
 	

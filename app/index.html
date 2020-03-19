@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <div class="background-block" style="background-image: url('/img/background.png');">
+        <div class="shadow-block">
+            <div class="container start-container">
+                <div class="start-block">
+                    <div class="start-block__title">
+                        <p>коллекция</p>
+                        <span>весна - лето</span>
+                        <p>2020-2021</p>
+                    </div>
+                    <a href="" class="linkBtn" id="showRegisterForm">START</a>
+                </div>
+                <div class="register-block">
+                    <form class="signForm">
+                        <div class="form__title">авторизация</div>
+                        <input type="text" name="name" placeholder="Ф.И.О. Менеджер">
+                        <input type="text" name="place" placeholder="Регион">
+                        <input type="phone" name="phoneNumber" class="phone-number" placeholder="Телефон">
+                        <input type="submit" value="зарегистрироваться" id="register">
+                    </form>
+                </div>
+               <div class="register-client">
+                   <form class="client-form">
+                        <div class="form__title">регистрация клиента</div>
+                        <input type="text" name="company" placeholder="Компания">
+                        <input type="text" name="place" placeholder="Регион">
+                        <input type="text" name="presentationDate" class="presentationDate" placeholder="Дата Презентации дд.мм.гггг">
+                        <input type="submit" value="начать презентацию" id="registerClient">
+                    </form>
+               </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

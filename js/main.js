@@ -160,7 +160,12 @@ $(function() {
 		e.preventDefault();
 		$(location).attr('href', "https://lyamovsergeysm.github.io/collections.html");
 	})
-	
+
+
+	//Страница каталог > заполнить элементы цифрами
+	$(".catalog .catalog__num").each(function(index, el){
+		$(el).text(index+1);
+	});
 
 
 });

@@ -27,11 +27,13 @@ const staticAssets = [
 self.addEventListener('install', async event =>{
 	const cache = await caches.open(staticCacheName);
 	await cache.addAll(staticAssets);
-	console.log('SW installed')
+	
 });
-self.addEventListener('activate', async event =>{
-	console.log('SW activated')
-});
+// self.addEventListener('activate', async event =>{
+// 	console.log('SW activated')
+// });
 self.addEventListener('fetch', async event =>{
-	console.log(`trying to fetch ${event.request.url}`);
+	event.respondWith(caches.match(event.request).then(cachedResponse => {
+		return cachedResponse || fetch(event.request)
+	}));
 });

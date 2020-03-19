@@ -16,3 +16,6 @@ self.addEventListener('install', async event =>{
 self.addEventListener('activate', async event =>{
 	console.log('SW activated')
 });
+self.addEventListener('fetch', async event =>{
+	console.log(`trying to fetch ${event.request.url}`);
+});

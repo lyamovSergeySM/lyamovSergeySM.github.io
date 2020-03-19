@@ -10,7 +10,23 @@
 // toolbox.router.get('/*', toolbox.networkFirst, {
 //   networkTimeoutSeconds: 5
 // });
+const staticCacheName = 'static-cache-v0';
+const staticAssets = [
+	'./',
+	'./index.html',
+	'./img/icons/icon-128x128.png',
+	'./img/icons/icon-192x192.png',
+	'./css/main.css',
+	'./css/libs.css',
+	'./js/main.js',
+	'./js/libs.min.js',
+];
+
+
+
 self.addEventListener('install', async event =>{
+	const cache = await caches.open(staticCacheName);
+	await cache.addAll(staticAssets);
 	console.log('SW installed')
 });
 self.addEventListener('activate', async event =>{

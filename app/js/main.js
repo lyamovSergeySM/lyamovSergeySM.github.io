@@ -19,7 +19,7 @@ $(function() {
 	//показать блок с регистрацией клиента + заменить фоновую картинку
 	function showRegisterClient(){
 		$(".register-client").addClass('showBlock');
-		$(".background-block").css("background-image", "url('/img/women-collection.jpg')");
+		$(".background-block").css("background-image", "url('../app/img/women-collection.jpg')");
 	}
 
 

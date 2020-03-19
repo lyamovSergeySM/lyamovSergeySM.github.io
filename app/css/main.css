@@ -63,7 +63,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 480px;
+  max-width: 360px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
@@ -295,3 +295,88 @@ label.error {
 
 .register-client.showBlock {
   right: 0; }
+
+header {
+  width: 100%;
+  height: 85px;
+  background: #000; }
+  header .header__company-name {
+    height: 25px;
+    background: #C2C2C2;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.header-container {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .header-container p {
+    color: #fff; }
+  .header-container .back-button,
+  .header-container .burger,
+  .header-container .user {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff; }
+
+.collections {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .collections .collections__title {
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0 23px 0;
+    font-weight: 400; }
+    .collections .collections__title span {
+      font-weight: 700; }
+  .collections .collections__link {
+    width: 328px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 18px; }

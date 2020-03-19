@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#000000">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="back-button"></div>
+            <div class="burger"></div>
+            <div class="user"></div>
+        </div>
+        <p class="header__company-name">
+            TM “Боты без заботы”
+        </p>
+    </header>
+    <main>
+        <div class="container">
+            <section class="collections">
+                <h1 class="collections__title">
+                    <span>весна-лето</span> 2020-2021
+                </h1>
+                <a href="" class="collections__link" style="background-image: url('../img/men-collection.jpg');"></a>
+                <a href="" class="collections__link" style="background-image: url('../img/women-collection.jpg');"></a>
+                <a href="" class="collections__link" style="background-image: url('../img/men-collection.jpg');"></a>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

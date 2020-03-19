@@ -53,7 +53,7 @@ body{
 .container{
 	display: flex;
 	flex-direction: column;
-	max-width: 480px;
+	max-width: 360px;
 	// border: 1px solid red;
 	flex: 1 1 auto;
 }
@@ -227,4 +227,63 @@ label.error {
 }
 .register-client.showBlock{
 	right: 0;
+}
+
+header{
+	width: 100%;
+	height: 85px;
+	background: #000;
+	.header__company-name{
+		height: 25px;
+		background: #C2C2C2;
+		text-align: center;
+		font-size: 12px;
+		line-height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.header-container{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	p{
+		color: #fff;
+	}
+	.back-button,
+	.burger,
+	.user{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #fff;
+	}
+}
+.collections{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.collections__title{
+		font-size: 18px;
+		line-height: 26px;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 15px 0 23px 0;
+		font-weight: 400;
+		span{
+			font-weight: 700;
+		}
+	}
+	.collections__link{
+		width: 328px;
+		height: 300px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+		margin-bottom: 18px;
+	}
 }

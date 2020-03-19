@@ -4,19 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000"/>
+    <meta name="theme-color" content="#000000" />
     <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
     <meta name="apple-mobile-web-app-status-bar" content="#000000">
     <title>Document</title>
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 </head>
 
 <body>
-  
     <div class="background-block" style="background-image: url('../app/img/background.png');">
-    <!-- <div class="background-block" style="background-image: url('../img/background.png');"> -->
+        <!-- <div class="background-block" style="background-image: url('../img/background.png');"> -->
         <div class="shadow-block">
             <div class="container start-container">
                 <div class="start-block">
@@ -36,23 +48,20 @@
                         <input type="submit" value="зарегистрироваться" id="register">
                     </form>
                 </div>
-               <div class="register-client">
-                   <form class="client-form">
+                <div class="register-client">
+                    <form class="client-form">
                         <div class="form__title">регистрация клиента</div>
                         <input type="text" name="company" placeholder="Компания">
                         <input type="text" name="place" placeholder="Регион">
                         <input type="text" name="presentationDate" class="presentationDate" placeholder="Дата Презентации дд.мм.гггг">
                         <input type="submit" value="начать презентацию" id="registerClient">
                     </form>
-               </div>
-
+                </div>
             </div>
         </div>
     </div>
-    
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="app.js"></script>
 </body>
 
 </html>

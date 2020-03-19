@@ -10,3 +10,9 @@
 // toolbox.router.get('/*', toolbox.networkFirst, {
 //   networkTimeoutSeconds: 5
 // });
+self.addEventListener('install', async event =>{
+	console.log('SW installed')
+});
+self.addEventListener('activate', async event =>{
+	console.log('SW activated')
+});

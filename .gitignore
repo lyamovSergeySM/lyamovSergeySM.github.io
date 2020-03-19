@@ -1,0 +1,21 @@
+# files
+.DS_Store
+Thumbs.db
+*.tar.gz*
+/restore.php
+*.js.orig
+*.js.base
+*.php.orig
+*.php.base
+*.css.orig
+*.css.base
+/.idea/
+/dist/*
+/node_modules/*
+/codeception.*
+/composer.*
+/tr.php
+/exceptions.log
+/.idea/*
+/build/*
+/*-lock.json

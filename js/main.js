@@ -283,7 +283,8 @@ $(function() {
 	};
 
 
-  	$("#addToOrder").on("click", function(){
+  	$("#addToOrder").on("click", function(e){
+  		e.preventDefault();
   		//собрать значения со всех input записать в data
   		$(".order-form .options-list .color .options-list__item").each(function(index, el){
   			let color = $(el).find("span").text();
@@ -331,7 +332,7 @@ $(function() {
 
   		//Проверить data, если объект не пустой показать модальное окно
   		if(Object.keys(data.colors).length != 0 || Object.keys(data.rigging).length != 0){	
-	  		// $("#modalOrder").modal('show');
+	  		$("#modalOrder").modal('show');
   		}
   	})
 

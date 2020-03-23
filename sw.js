@@ -9,10 +9,10 @@ const staticAssets = [
 	'./passport.html',
 	'./img/icons/icon-128x128.png',
 	'./img/icons/icon-192x192.png',
-	'./css/main.css',
-	'./css/libs.css',
-	'./js/main.js',
-	'./js/libs.min.js',
+	// './css/main.css',
+	// './css/libs.css',
+	// './js/main.js',
+	// './js/libs.min.js',
 ];
 
 

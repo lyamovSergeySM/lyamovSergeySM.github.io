@@ -332,7 +332,9 @@ $(function() {
 
   		//Проверить data, если объект не пустой показать модальное окно
   		if(Object.keys(data.colors).length != 0 || Object.keys(data.rigging).length != 0){	
-	  		$("#modalOrder").modal('show');
+	  		setTimeout(function(){
+          $("#modalOrder").modal('show');
+        }, 1000);
   		}
   	})
 

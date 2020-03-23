@@ -164,7 +164,7 @@ $(function() {
 
 
     //Страница каталог > заполнить элементы цифрами
-    $(".catalog .catalog__num").each(function(index, el) {
+    $(".chess .chess__num").each(function(index, el) {
         $(el).text(index + 1);
     });
 
@@ -258,7 +258,18 @@ $(function() {
   	$(document).on("click", ".smile-block a", function(e){
   		e.preventDefault();
   		$(this).addClass("active").siblings().removeClass("active");
-  	})
+  	});
 
+
+  	//пасспорт модели > слайдер история
+  	$('.history-slider').slick({
+  		slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        infinite: false,
+        variableWidth: true
+  	});
 
 });

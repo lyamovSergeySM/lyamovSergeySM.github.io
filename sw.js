@@ -6,6 +6,7 @@ const staticAssets = [
 	'./collections.html',
 	'./catalog.html',
 	'./product-card.html',
+	'./passport.html',
 	'./img/icons/icon-128x128.png',
 	'./img/icons/icon-192x192.png',
 	'./css/main.css',

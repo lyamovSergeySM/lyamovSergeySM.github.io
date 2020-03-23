@@ -19,7 +19,6 @@ $(function() {
     //показать блок с регистрацией клиента + заменить фоновую картинку
     function showRegisterClient() {
         $(".register-client").addClass('showBlock');
-        // $(".background-block").css("background-image", "url('../app/img/women-collection.jpg')");
         $(".background-block").css("background-image", "url('../img/women-collection.jpg')");
     }
 
@@ -135,7 +134,7 @@ $(function() {
 
 
 
-    //маска поля даты
+    //маска поля даты - по-умолчанию подставляется текущая дата
     $(".presentationDate").mask("99.*9.9999", { placeholder: date });
 
 
@@ -191,7 +190,7 @@ $(function() {
     });
 
 
-    //карточка товара слайдер
+    //карточка товара > слайдер в модальном окне
     
     $("#modalSlider").on("shown.bs.modal", function() {
     	
@@ -255,13 +254,13 @@ $(function() {
 
   	//Карточка товара > смайл-комментарий
 
-  	$(document).on("click", ".smile-block a", function(e){
+  	$(document).on("click", ".smile-block p", function(e){
   		e.preventDefault();
   		$(this).addClass("active").siblings().removeClass("active");
   	});
 
 
-  	//пасспорт модели > слайдер история
+  	//паспорт модели > слайдер история
   	$('.history-slider').slick({
   		slidesToShow: 2,
         slidesToScroll: 1,
@@ -271,5 +270,69 @@ $(function() {
         infinite: false,
         variableWidth: true
   	});
+
+
+  	//карточка товара > форма заказа в модальном окне
+
+  	//данные о заказе
+	let data = {
+		colors: {},
+		rigging: {},
+		comment: '',
+		rating: ''
+	};
+
+
+  	$("#addToOrder").on("click", function(){
+  		//собрать значения со всех input записать в data
+  		$(".order-form .options-list .color .options-list__item").each(function(index, el){
+  			let color = $(el).find("span").text();
+  			let quantity = $(el).find("input").val();
+  			if(quantity != 0){
+	  			data.colors[color] = quantity;
+  			}else{
+  				delete data.colors[color];
+  			}
+  		})
+  		$(".order-form .options-list .rigging .options-list__item").each(function(index, el){
+  			let name = $(el).find(".rigging__title").text();
+  			let quantity = $(el).find("input").val();
+  			if(quantity != 0){
+	  			data.rigging[name] = quantity;
+  			}else{
+  				delete data.rigging[name];
+  			}
+  		})
+
+  		//добавить комментарий
+  		data.comment = $('.comment').val();
+
+  		//добавить оценку
+  		data.rating = $(".smile-block .active").data('rating');
+
+  		//При каждом клике удалять все элементы формы и заполнять новыми
+  		$(".form-options__item").remove();
+
+  
+  		for( var key in data.colors){
+  			$(`<div class="form-options__item">
+				<input disabled type="text" class="form-options__color" value="${key}">
+                <input disabled type="text" class="form-options__quantity" value="${data.colors[key]} шт">
+  				</div>`).appendTo(".form-options.color");
+  		}
+
+  		for( var key in data.rigging){
+  			$(`<div class="form-options__item">
+				<input disabled type="text" class="form-options__rigging" value="${key}">
+                <input disabled type="text" class="form-options__quantity" value="${data.rigging[key]} шт">
+  				</div>`).appendTo(".form-options.rigging");
+  		}
+
+
+  		//Проверить data, если объект не пустой показать модальное окно
+  		if(Object.keys(data.colors).length != 0 || Object.keys(data.rigging).length != 0){	
+	  		$("#modalOrder").modal('show');
+  		}
+  	})
 
 });

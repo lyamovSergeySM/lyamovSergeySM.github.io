@@ -83,7 +83,7 @@
             </section>
             <section class="order-block">
                 <h2 class="grey-title">Бланк заказа</h2>
-                <form class="order-form">
+                <div class="order-form">
                     <div class="size-block">
                         <p class="size-block__title">Размер <span>(mm):</span></p>
                         <div class="size-block__items">
@@ -102,80 +102,79 @@
                     </div>
                     <div class="options-list">
                         <div class="color">
-                            <div class="color__item">
+                            <div class="options-list__item">
                                 <p class="red"></p>
                                 <span>15</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
                             </div>
-                            <div class="color__item">
+                            <div class="options-list__item">
                                 <p class="green"></p>
                                 <span>64</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
                             </div>
-                            <div class="color__item">
+                            <div class="options-list__item">
                                 <p class="blue"></p>
                                 <span>28</span>
-                            </div>
-                        </div>
-                        <div class="quantity">
-                            <div class="quantity__item">
-                                <span class="minus"></span>
-                                <input type="number" min="0">
-                                <span class="plus"></span>
-                            </div>
-                            <div class="quantity__item">
-                                <span class="minus"></span>
-                                <input type="number"  min="0">
-                                <span class="plus"></span>
-                            </div>
-                            <div class="quantity__item">
-                                <span class="minus"></span>
-                                <input type="number"  min="0">
-                                <span class="plus"></span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="rigging">
-                            <div class="rigging__item">A.P OM-5992-V</div>
-                            <div class="rigging__item">A.P OM-5992-V</div>
-                        </div>
-                        <div class="quantity">
-                            <div class="quantity__item">
-                                <span class="minus"></span>
-                                <input type="number"  min="0">
-                                <span class="plus"></span>
+                            <div class="options-list__item">
+                                <p class="rigging__title">A.P OM-5992-V</p>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
                             </div>
-                            <div class="quantity__item">
-                                <span class="minus"></span>
-                                <input type="number"  min="0">
-                                <span class="plus"></span>
+                            <div class="options-list__item">
+                                <p class="rigging__title">A.P OM-5993-V</p>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value="заказать образцы">
+                    <button id="addToOrder">заказать образцы</button>
                     <p class="grey-title">Оценка клиента</p>
-                    <textarea placeholder="Комментарий"></textarea>
+                    <textarea class="comment" placeholder="Комментарий"></textarea>
                     <div class="smile-block">
-                        <a href="" class="veryBad">
+                        <p data-rating="veryBad">
                             <img class="colored" src="img/smile5.1.svg" alt="">
                             <img src="img/smile5.0.svg" alt="">
-                        </a>
-                        <a href="" class="bad">
+                        </p>
+                        <p data-rating="bad">
                             <img class="colored" src="img/smile4.1.svg" alt="">
                             <img src="img/smile4.0.svg" alt="">
-                        </a>
-                        <a href="" class="normal">
+                        </p>
+                        <p data-rating="normal">
                             <img class="colored" src="img/smile3.1.svg" alt="">
                             <img src="img/smile3.0.svg" alt="">
-                        </a>
-                        <a href="" class="good">
+                        </p>
+                        <p data-rating="good">
                             <img class="colored" src="img/smile2.1.svg" alt="">
                             <img src="img/smile2.0.svg" alt="">
-                        </a>
-                        <a href="" class="veryGood active">
+                        </p>
+                        <p data-rating="veryGood" class="active">
                             <img class="colored" src="img/smile1.1.svg" alt="">
                             <img src="img/smile1.0.svg" alt="">
-                        </a>
+                        </p>
                     </div>
-                </form>
-
+                </div>
             </section>
             <div class="pagination">
                 <a href="" class="prew">предыдущая</a>
@@ -185,33 +184,83 @@
         </div>
     </main>
     <!-- modal -->
-    <div class="modal fade" id="modalSlider" tabindex="-1" role="dialog"  aria-hidden="true">
+    <!-- modal slider -->
+    <div class="modal fade" id="modalSlider" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-              
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="modal-body">
                     <p class="modalSlider__title">Пряжка рабочая A.KFM-4550-10</p>
                     <div class="slider-nav">
-                      <div><img src="img/slider1.jpg" alt=""></div>
-                      <div><img src="img/slider2.jpg" alt=""></div>
-                      <div><img src="img/slider3.jpg" alt=""></div>
-                      <div><img src="img/slider1.jpg" alt=""></div>
-                      <div><img src="img/slider2.jpg" alt=""></div>
-                      <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
                     </div>
                     <div class="slider-for">
-                      <div><img src="img/slider1.jpg" alt=""></div>
-                      <div><img src="img/slider2.jpg" alt=""></div>
-                      <div><img src="img/slider3.jpg" alt=""></div>
-                      <div><img src="img/slider1.jpg" alt=""></div>
-                      <div><img src="img/slider2.jpg" alt=""></div>
-                      <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+    </div>
+    <!-- modal order -->
+    <div class="modal fade" id="modalOrder" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body modal-form">
+                    <form action="">
+                        <p class="modal-form__title">Добавлено в заказ:</p>
+                        <p class="modal-form__name-model">Пряжка рабочая A.KFM-4550-10</p>
+                        <div class="form-options color">
+                            <p>цвет</p>
+                            <p>кол-во</p>
+                            <div class="form-options__item">
+                                <input disabled type="text" class="form-options__color" value="13">
+                                <input disabled type="text" class="form-options__quantity" value="100 шт">
+                            </div>
+                            <div class="form-options__item">
+                                <input disabled type="text" class="form-options__color" value="63">
+                                <input disabled type="text" class="form-options__quantity" value="2 шт">
+                            </div>
+                            <div class="form-options__item">
+                                <input disabled type="text" class="form-options__color" value="83">
+                                <input disabled type="text" class="form-options__quantity" value="6 шт">
+                            </div>
+                        </div>
+                        <div class="form-options rigging">
+                            <p>Оснастки</p>
+                            <p>кол-во</p>
+
+                            <div class="form-options__item">
+                                <input disabled type="text" class="form-options__rigging" value="A.P OM-5992-V">
+                                <input disabled type="text" class="form-options__quantity" value="2 шт">
+                            </div>
+                            <div class="form-options__item">
+                                <input disabled type="text" class="form-options__color" value="A.P OM-5992-V">
+                                <input disabled type="text" class="form-options__quantity" value="2 шт">
+                            </div>
+
+
+                            
+                        </div>
+                        <div class="button-block">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                Отмена
+                            </button>
+                            <input type="submit" class="send-form" value="ок">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

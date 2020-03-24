@@ -12,19 +12,6 @@
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-            navigator.serviceWorker.register('sw.js').then(function(registration) {
-              // Registration was successful
-              console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-              // registration failed :(
-              console.log('ServiceWorker registration failed: ', err);
-            });
-          });
-        }
-    </script> -->
 </head>
 
 <body>
@@ -39,7 +26,7 @@
                     <span>Бровары</span>
                 </p>
                 <div class="user__submenu">
-                    <a href="" class="user__link">
+                    <a href="https://lyamovsergeysm.github.io/order-list.html" class="user__link">
                         <div class="submenu-img"></div>
                         <p>Ваш заказ</p>
                     </a>
@@ -60,7 +47,7 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container product-card">
             <section class="product-info">
                 <a href="#modalSlider" class="product-info__img" data-toggle="modal">
                     <p class="number">1</p>
@@ -129,6 +116,60 @@
                                     <span class="plus"></span>
                                 </div>
                             </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>33</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>45</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>68</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>74</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>15</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
+                            <div class="options-list__item">
+                                <p class="blue"></p>
+                                <span>34</span>
+                                <div class="quantity__item">
+                                    <span class="minus"></span>
+                                    <input type="number" min="0">
+                                    <span class="plus"></span>
+                                </div>
+                            </div>
                         </div>
                         <div class="rigging">
                             <div class="options-list__item">
@@ -149,38 +190,40 @@
                             </div>
                         </div>
                     </div>
-                    <button id="addToOrder">заказать образцы</button>
-                    <p class="grey-title">Оценка клиента</p>
-                    <textarea class="comment" placeholder="Комментарий"></textarea>
-                    <div class="smile-block">
-                        <p data-rating="veryBad">
-                            <img class="colored" src="img/smile5.1.svg" alt="">
-                            <img src="img/smile5.0.svg" alt="">
-                        </p>
-                        <p data-rating="bad">
-                            <img class="colored" src="img/smile4.1.svg" alt="">
-                            <img src="img/smile4.0.svg" alt="">
-                        </p>
-                        <p data-rating="normal">
-                            <img class="colored" src="img/smile3.1.svg" alt="">
-                            <img src="img/smile3.0.svg" alt="">
-                        </p>
-                        <p data-rating="good">
-                            <img class="colored" src="img/smile2.1.svg" alt="">
-                            <img src="img/smile2.0.svg" alt="">
-                        </p>
-                        <p data-rating="veryGood" class="active">
-                            <img class="colored" src="img/smile1.1.svg" alt="">
-                            <img src="img/smile1.0.svg" alt="">
-                        </p>
-                    </div>
                 </div>
             </section>
-            <div class="pagination">
-                <a href="" class="prew">предыдущая</a>
-                <p class="page-num">1</p>
-                <a href="" class="next">следующая</a>
-            </div>
+            <section class="product-footer">
+                <button id="addToOrder">заказать образцы</button>
+                <p class="grey-title">Оценка клиента</p>
+                <textarea class="comment" placeholder="Комментарий"></textarea>
+                <div class="smile-block">
+                    <p data-rating="veryBad">
+                        <img class="colored" src="img/smile5.1.svg" alt="">
+                        <img src="img/smile5.0.svg" alt="">
+                    </p>
+                    <p data-rating="bad">
+                        <img class="colored" src="img/smile4.1.svg" alt="">
+                        <img src="img/smile4.0.svg" alt="">
+                    </p>
+                    <p data-rating="normal">
+                        <img class="colored" src="img/smile3.1.svg" alt="">
+                        <img src="img/smile3.0.svg" alt="">
+                    </p>
+                    <p data-rating="good">
+                        <img class="colored" src="img/smile2.1.svg" alt="">
+                        <img src="img/smile2.0.svg" alt="">
+                    </p>
+                    <p data-rating="veryGood" class="active">
+                        <img class="colored" src="img/smile1.1.svg" alt="">
+                        <img src="img/smile1.0.svg" alt="">
+                    </p>
+                </div>
+                <div class="pagination">
+                    <a href="" class="prew">предыдущая</a>
+                    <p class="page-num">1</p>
+                    <a href="" class="next">следующая</a>
+                </div>
+            </section>
         </div>
     </main>
     <!-- modal -->
@@ -240,7 +283,6 @@
                         <div class="form-options rigging">
                             <p>Оснастки</p>
                             <p>кол-во</p>
-
                             <div class="form-options__item">
                                 <input disabled type="text" class="form-options__rigging" value="A.P OM-5992-V">
                                 <input disabled type="text" class="form-options__quantity" value="2 шт">
@@ -249,9 +291,6 @@
                                 <input disabled type="text" class="form-options__color" value="A.P OM-5992-V">
                                 <input disabled type="text" class="form-options__quantity" value="2 шт">
                             </div>
-
-
-                            
                         </div>
                         <div class="button-block">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">

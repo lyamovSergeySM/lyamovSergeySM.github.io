@@ -1,18 +1,15 @@
 
-const staticCacheName = 'static-cache-v0';
+const staticCacheName = 'static-cache-v1';
+const dynamicCacheName = 'dynamic-cache-v0';
 const staticAssets = [
 	'./',
 	'./index.html',
-	'./collections.html',
-	'./catalog.html',
-	'./product-card.html',
-	'./passport.html',
 	'./img/icons/icon-128x128.png',
 	'./img/icons/icon-192x192.png',
-	// './css/main.css',
-	// './css/libs.css',
-	// './js/main.js',
-	// './js/libs.min.js',
+	'./css/main.css',
+	'./css/libs.css',
+	'./js/main.js',
+	'./js/libs.min.js',
 ];
 
 
@@ -22,11 +19,40 @@ self.addEventListener('install', async event =>{
 	await cache.addAll(staticAssets);
 	
 });
-// self.addEventListener('activate', async event =>{
-// 	console.log('SW activated')
-// });
-self.addEventListener('fetch', async event =>{
-	event.respondWith(caches.match(event.request).then(cachedResponse => {
-		return cachedResponse || fetch(event.request)
-	}));
+
+
+self.addEventListener('activate', async event => {
+    const cachesKeys = await caches.keys();
+    const checkKeys = cachesKeys.map(async key => {
+        if (![staticCacheName, dynamicCacheName].includes(key)) {
+            await caches.delete(key);
+        }
+    });
+    await Promise.all(checkKeys);
 });
+
+
+self.addEventListener('fetch', async event =>{
+	event.respondWith(checkCache(event.request));
+});
+
+async function checkCache(req) {
+    const cachedResponse = await caches.match(req);
+    return cachedResponse || checkOnline(req);
+}
+
+async function checkOnline(req) {
+    const cache = await caches.open(dynamicCacheName);
+    try {
+        const res = await fetch(req);
+        await cache.put(req, res.clone());
+        return res;
+    } catch (error) {
+        const cachedRes = await cache.match(req);
+        if (cachedRes) {
+            return cachedRes;
+        } else if (req.url.indexOf('.html') !== -1) {
+            return caches.match('./offline.html');
+        }
+    }
+}

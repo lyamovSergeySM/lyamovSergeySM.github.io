@@ -272,7 +272,7 @@ a {
     outline: none;
     height: 40px;
     min-height: 40px;
-    border: 1px solid blue !important; }
+    border: 1px solid blue; }
   .signForm input[type="submit"],
   .client-form input[type="submit"] {
     font-size: 18px;

@@ -355,4 +355,11 @@ $(function() {
   		}
   	})
 
+  //карточка товара > скролл до комментариев
+  $(".pagination .next").on("click", function(e){
+    e.preventDefault();
+    let position = $(".smile-block").offset().top;
+    $('.order-block').animate({ scrollTop: position }, 1100);
+  });
+
 });

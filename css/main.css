@@ -275,9 +275,9 @@ a {
     font-size: 14px;
     line-height: 16px;
     outline: none;
-    border: 1px solid green;
     height: 40px;
-    min-height: 40px; }
+    min-height: 40px;
+    border: 1px solid yellow; }
   .signForm input[type="submit"],
   .client-form input[type="submit"] {
     font-size: 18px;
@@ -826,6 +826,52 @@ header {
   -webkit-flex-grow: 2;
       -ms-flex-positive: 2;
           flex-grow: 2; }
+  .order-block #addToOrder {
+    width: 250px;
+    height: 40px;
+    color: #fff;
+    background: #000;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+    .order-block #addToOrder:hover {
+      cursor: pointer; }
+  .order-block textarea {
+    margin-top: 5px;
+    width: 100%;
+    min-height: 68px;
+    border: 1px solid #EEEEEE;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px;
+    outline: none; }
+  .order-block .smile-block {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -14px;
+    z-index: 2; }
+    .order-block .smile-block p {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #dcdcdc;
+      display: block;
+      margin-right: 12px;
+      position: relative; }
+      .order-block .smile-block p img {
+        position: absolute;
+        z-index: 1; }
+    .order-block .smile-block .active .colored {
+      z-index: 2; }
 
 .order-form {
   display: -webkit-box;
@@ -1045,52 +1091,6 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .product-footer #addToOrder {
-    width: 250px;
-    height: 40px;
-    color: #fff;
-    background: #000;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 30px; }
-    .product-footer #addToOrder:hover {
-      cursor: pointer; }
-  .product-footer textarea {
-    margin-top: 5px;
-    width: 100%;
-    min-height: 68px;
-    border: 1px solid #EEEEEE;
-    font-size: 12px;
-    line-height: 20px;
-    padding: 5px;
-    outline: none; }
-  .product-footer .smile-block {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: -14px;
-    z-index: 2; }
-    .product-footer .smile-block p {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #dcdcdc;
-      display: block;
-      margin-right: 12px;
-      position: relative; }
-      .product-footer .smile-block p img {
-        position: absolute;
-        z-index: 1; }
-    .product-footer .smile-block .active .colored {
-      z-index: 2; }
   .product-footer .pagination {
     height: 42px;
     width: 100%;

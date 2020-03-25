@@ -275,7 +275,7 @@ a {
     font-size: 14px;
     line-height: 16px;
     outline: none;
-    border: 1px solid blue;
+    border: 1px solid green;
     height: 40px;
     min-height: 40px; }
   .signForm input[type="submit"],

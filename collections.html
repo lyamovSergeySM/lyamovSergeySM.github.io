@@ -18,7 +18,11 @@
     <header>
         <div class="container header-container">
             <div class="back-button"></div>
-            <div class="burger"></div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="user">
                 <img src="img/morda.png" alt="">
                 <p class="user__name">
@@ -44,6 +48,112 @@
                     </a>
                 </div>
             </div>
+            <div class="main-menu">
+                <div class="main-menu-content" id="menuAccordion">
+                    <div class="menu-title">МЕНЮ</div>
+                    <div class="menu-item">
+                        <div class="menu-item__name collapse-button collapsed" data-toggle="collapse" data-target="#collapseClients" aria-expanded="false">Клиенты</div>
+                        <div class="menu-item__collapse-block collapse" id="collapseClients" data-parent="#menuAccordion">
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client1" aria-expanded="false">ТМ "Боты без заботы"</p>
+                                    <a href="#info-client1" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true" ></a>
+                                    <a href="#presentation-client1" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client1" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client1">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client1">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client2" aria-expanded="false">ТМ “Барвинок”</p>
+                                    <a href="#info-client2" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true" ></a>
+                                    <a href="#presentation-client2" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client2" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client2">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client2">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client3" aria-expanded="false">ТМ “MIDA”</p>
+                                    <a href="#info-client3" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true" ></a>
+                                    <a href="#presentation-client3" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client3" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client3">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client3">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">коллекции</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">отчеты</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">отстройки</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">статистика</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <p class="header__company-name">
             TM “Боты без заботы”
@@ -61,8 +171,8 @@
                 <a href="https://lyamovsergeysm.github.io/catalog.html" class="collections__link" style="background-image: url('../img/men-collection.jpg');"></a>
             </section>
         </div>
+        
     </main>
-
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

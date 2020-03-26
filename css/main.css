@@ -278,7 +278,7 @@ a {
     outline: none;
     height: 40px;
     min-height: 40px;
-    border: 1px solid pink; }
+    border: 1px solid yellow; }
   .signForm input[type="submit"],
   .client-form input[type="submit"] {
     font-size: 18px;
@@ -358,10 +358,7 @@ header {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: relative;
-  /* хром, сафари */
-  /* ie 10+ */
-  /* фф (свойство больше не работает, других способов тоже нет)*/ }
+  position: relative; }
   .header-container p {
     color: #fff; }
   .header-container .back-button,
@@ -530,12 +527,6 @@ header {
       -o-transition: .3s;
       transition: .3s;
       font-weight: 400; }
-  .header-container .main-menu-content::-webkit-scrollbar {
-    width: 0; }
-  .header-container .main-menu-content {
-    -ms-overflow-style: none; }
-  .header-container .main-menu-content {
-    overflow: -moz-scrollbars-none; }
   .header-container .client-block .client-block__title {
     padding: 0 14px;
     width: 100%;
@@ -720,6 +711,23 @@ header {
     -o-transition: .3s;
     transition: .3s; }
 
+/* хром, сафари */
+.main-menu-content::-webkit-scrollbar {
+  width: 0; }
+
+.order-block::-webkit-scrollbar {
+  width: 0; }
+
+/* ie 10+ */
+.main-menu-content,
+.order-block {
+  -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.main-menu-content,
+.order-block {
+  overflow: -moz-scrollbars-none; }
+
 .main-title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -741,28 +749,14 @@ header {
     font-weight: 400;
     font-size: 18px; }
 
-.collections {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .collections .collections__link {
-    width: 328px;
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
-            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
-    margin-bottom: 18px; }
+.collections-link {
+  width: 328px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 18px; }
 
 .catalog-title {
   padding: 15px 0 30px 0;
@@ -1240,44 +1234,6 @@ header {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .order-form .options-list .quantity__item {
-      height: 23px;
-      width: 92px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .order-form .options-list .quantity__item input::-webkit-outer-spin-button,
-      .order-form .options-list .quantity__item input::-webkit-inner-spin-button {
-        -webkit-appearance: none; }
-      .order-form .options-list .quantity__item input[type='number'] {
-        -moz-appearance: textfield; }
-      .order-form .options-list .quantity__item input {
-        width: 30px;
-        margin: 0px 5px 0 5px;
-        height: 23px;
-        text-align: center;
-        font-size: 12px; }
-      .order-form .options-list .quantity__item span {
-        display: block;
-        width: 21px;
-        height: 23px;
-        background-repeat: no-repeat;
-        background-position: center; }
-        .order-form .options-list .quantity__item span:hover {
-          cursor: pointer; }
-      .order-form .options-list .quantity__item .minus {
-        background-image: url("../img/minus.svg"); }
-      .order-form .options-list .quantity__item .plus {
-        background-image: url("../img/plus.svg"); }
     .order-form .options-list .rigging {
       width: 187px;
       padding-left: 5px; }
@@ -1346,7 +1302,8 @@ header {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  width: 100%; }
   .product-footer .pagination {
     height: 42px;
     width: 100%;
@@ -1651,27 +1608,30 @@ header {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-bottom: 20px; }
-  .order-list input[type="submit"] {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    width: 250px;
-    height: 40px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #000;
-    border: none;
-    outline: none; }
+
+#send-form {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 250px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  border: none;
+  outline: none; }
+  #send-form:hover {
+    cursor: pointer; }
 
 .order-item {
   width: 100%;
@@ -1844,3 +1804,213 @@ header {
           flex-direction: column;
   overflow: auto !important;
   max-height: 90vh !important; }
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.settings-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+
+.settings-item {
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 18px;
+  background: #FFFFFF;
+  padding: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative; }
+  .settings-item .settings-item__img-block {
+    width: 80px;
+    min-width: 80px;
+    height: 95px; }
+    .settings-item .settings-item__img-block img {
+      width: 100%; }
+  .settings-item .settings-item__options-block {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    padding-left: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .settings-item .settings-item__title {
+    width: 155px;
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 5px; }
+  .settings-item .settings-item__edit-btn,
+  .settings-item .settings-item__del-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: none;
+    outline: none;
+    background: #C4C4C4;
+    border-radius: 50%;
+    top: 5px; }
+    .settings-item .settings-item__edit-btn:hover,
+    .settings-item .settings-item__del-btn:hover {
+      cursor: pointer; }
+  .settings-item .settings-item__del-btn {
+    right: 5px;
+    background-image: url("../img/DeleteBtn.svg");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .settings-item .settings-item__edit-btn {
+    right: 30px;
+    background-image: url("../img/editBtn.svg");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .settings-item .optionsList-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding-bottom: 15px; }
+    .settings-item .optionsList-header .optionsList-header__left,
+    .settings-item .optionsList-header .optionsList-header__right {
+      width: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .settings-item .optionsList-header .optionsList-header__left p,
+      .settings-item .optionsList-header .optionsList-header__right p {
+        font-size: 12px;
+        text-align: center;
+        color: #000000;
+        width: 100%; }
+    .settings-item .optionsList-header .optionsList-header__left p {
+      width: 50%; }
+  .settings-item .optionsList-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 15px; }
+    .settings-item .optionsList-item .optionsList-item__left,
+    .settings-item .optionsList-item .optionsList-item__right {
+      width: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .settings-item .optionsList-item .optionsList-item__left p,
+      .settings-item .optionsList-item .optionsList-item__right p {
+        font-size: 12px;
+        text-align: center;
+        color: #000000;
+        width: 100%; }
+    .settings-item .optionsList-item .optionsList-header__left p {
+      width: 50%; }
+
+.input-block {
+  height: 23px;
+  width: 92px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .input-block input::-webkit-outer-spin-button,
+  .input-block input::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
+  .input-block input[type='number'] {
+    -moz-appearance: textfield; }
+  .input-block input {
+    width: 30px;
+    margin: 0px 5px 0 5px;
+    height: 23px;
+    text-align: center;
+    font-size: 12px; }
+  .input-block span {
+    display: block;
+    width: 21px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .input-block span:hover {
+      cursor: pointer; }
+  .input-block .minus {
+    background-image: url("../img/minus.svg"); }
+  .input-block .plus {
+    background-image: url("../img/plus.svg"); }

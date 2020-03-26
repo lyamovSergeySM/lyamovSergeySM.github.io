@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#000000">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="back-button"></div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="user">
+                <img src="img/morda.png" alt="">
+                <p class="user__name">
+                    Кантаржи Вячеслав
+                    <span>Бровары</span>
+                </p>
+                <div class="user__submenu">
+                    <a href="https://lyamovsergeysm.github.io/order-list.html" class="user__link">
+                        <div class="submenu-img"></div>
+                        <p>Ваш заказ</p>
+                    </a>
+                    <a href="" class="user__link">
+                        <div class="submenu-img"></div>
+                        <p>Ваш заказ</p>
+                    </a>
+                    <a href="" class="user__link">
+                        <div class="submenu-img"></div>
+                        <p>Отчеты</p>
+                    </a>
+                    <a href="" class="user__link">
+                        <div class="submenu-img"></div>
+                        <p>Личные данные</p>
+                    </a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="main-menu-content" id="menuAccordion">
+                    <div class="menu-title">МЕНЮ</div>
+                    <div class="menu-item">
+                        <div class="menu-item__name collapse-button collapsed" data-toggle="collapse" data-target="#collapseClients" aria-expanded="false">Клиенты</div>
+                        <div class="menu-item__collapse-block collapse" id="collapseClients" data-parent="#menuAccordion">
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client1" aria-expanded="false">ТМ "Боты без заботы"</p>
+                                    <a href="#info-client1" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true"></a>
+                                    <a href="#presentation-client1" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client1" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client1">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client1">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client2" aria-expanded="false">ТМ “Барвинок”</p>
+                                    <a href="#info-client2" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true"></a>
+                                    <a href="#presentation-client2" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client2" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client2">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client2">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="client-block">
+                                <div class="client-block__title nav" role="tablist">
+                                    <p data-toggle="collapse" data-target="#client3" aria-expanded="false">ТМ “MIDA”</p>
+                                    <a href="#info-client3" class="client-info nav-link active" data-toggle="tab" role="tab" aria-selected="true"></a>
+                                    <a href="#presentation-client3" class="client-presentation nav-link" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                </div>
+                                <div class="client-block__discription collapse tab-content" id="client3" data-parent="#collapseClients">
+                                    <div class="client-info-block tab-pane fade show active" role="tabpanel" id="info-client3">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">контактные данные</p>
+                                            <p class="client-text_style client-mail">botibezzaboti@mail.com</p>
+                                            <p class="client-text_style client-phone">+380 66 89 65 32</p>
+                                            <p class="client-text_style client-adress">ул. Смирнова, 15</p>
+                                            <p class="client-text_style client-saler">Оптовая торговля</p>
+                                        </div>
+                                    </div>
+                                    <div class="client-presentation-block tab-pane fade" role="tabpanel" id="presentation-client3">
+                                        <div class="wrapper">
+                                            <p class="client-block__header">презентации</p>
+                                            <a href="" class="client-text_style visited">Весна-Лето Ж 2020-21 (Ч1)</a>
+                                            <a href="" class="client-text_style visited">Весна-Лето М 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Д 2020-21</a>
+                                            <a href="" class="client-text_style">Весна-Лето Ж 2020-21 (Ч2)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">коллекции</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">отчеты</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">отстройки</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__name">статистика</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="header__company-name">
+            TM “Боты без заботы” - <span class="presentatian-date">14.03.2020</span>
+        </p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-wrapper">
+                <h1 class="main-title">
+                    <p>отстройка</p>
+                    <span>весна-лето 2020-2021</span>
+                </h1>
+                <form class="settings-form">
+                    <div class="settings-item">
+                        <a href="" class="settings-item__edit-btn"></a>
+                        <button class="settings-item__del-btn"></button>
+                        <a href="#modalSlider" class="settings-item__img-block" data-toggle="modal">
+                            <img src="img/slider1.jpg" alt="">
+                        </a>
+                        <div class="settings-item__options-block">
+                            <p class="settings-item__title">Пряжка рабочая A.KFM-4550-10</p>
+                            <div class="optionsList-header">
+                                <div class="optionsList-header__left">
+                                    <p>Цвет</p>
+                                    <p>Кол-во</p>
+                                </div>
+                                <div class="optionsList-header__right">
+                                    <p>Отстройка шт.</p>
+                                </div>
+                            </div>
+                           
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">13</p>
+                                    <p class="quantity">100</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="100">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">63</p>
+                                    <p class="quantity">4</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="4">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">83</p>
+                                    <p class="quantity">6</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="6">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-item">
+                        <a href="" class="settings-item__edit-btn"></a>
+                        <button class="settings-item__del-btn"></button>
+                        <a href="#modalSlider" class="settings-item__img-block" data-toggle="modal">
+                            <img src="img/slider1.jpg" alt="">
+                        </a>
+                        <div class="settings-item__options-block">
+                            <p class="settings-item__title">Пряжка рабочая A.KFM-4550-10</p>
+                            <div class="optionsList-header">
+                                <div class="optionsList-header__left">
+                                    <p>Цвет</p>
+                                    <p>Кол-во</p>
+                                </div>
+                                <div class="optionsList-header__right">
+                                    <p>Отстройка шт.</p>
+                                </div>
+                            </div>
+                           
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">13</p>
+                                    <p class="quantity">100</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="100">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">63</p>
+                                    <p class="quantity">4</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="4">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">83</p>
+                                    <p class="quantity">6</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="6">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-item">
+                        <a href="" class="settings-item__edit-btn"></a>
+                        <button class="settings-item__del-btn"></button>
+                        <a href="#modalSlider" class="settings-item__img-block" data-toggle="modal">
+                            <img src="img/slider1.jpg" alt="">
+                        </a>
+                        <div class="settings-item__options-block">
+                            <p class="settings-item__title">Пряжка рабочая A.KFM-4550-10</p>
+                            <div class="optionsList-header">
+                                <div class="optionsList-header__left">
+                                    <p>Цвет</p>
+                                    <p>Кол-во</p>
+                                </div>
+                                <div class="optionsList-header__right">
+                                    <p>Отстройка шт.</p>
+                                </div>
+                            </div>
+                           
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">13</p>
+                                    <p class="quantity">100</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="100">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">63</p>
+                                    <p class="quantity">4</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="4">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="optionsList-item">
+                                <div class="optionsList-item__left">
+                                    <p class="color">83</p>
+                                    <p class="quantity">6</p>
+                                </div>
+                                <div class="optionsList-item__right">
+                                    <div class="input-block">
+                                        <span class="minus"></span>
+                                        <input type="number" min="0" value="6">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <input type="submit" id="send-form" value="сохранить">
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- modal -->
+    <!-- modal slider -->
+    <div class="modal fade" id="modalSlider" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <p class="modalSlider__title">Пряжка рабочая A.KFM-4550-10</p>
+                    <div class="slider-nav">
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                    </div>
+                    <div class="slider-for">
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                        <div><img src="img/slider1.jpg" alt=""></div>
+                        <div><img src="img/slider2.jpg" alt=""></div>
+                        <div><img src="img/slider3.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

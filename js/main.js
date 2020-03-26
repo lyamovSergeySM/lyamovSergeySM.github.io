@@ -171,7 +171,48 @@ $(function() {
             }, 2000);
 
         }
+        // var request = new XMLHttpRequest();
+
+        // request.open('POST', 'http://devbit.ga/api/v1/auth/?apiKey=123456');
+        // request.setRequestHeader('Content-Type', 'application/json');
+        // request.onreadystatechange = function() {
+        //     if (this.readyState === 4) {
+        //         console.log('Status:', this.status);
+        //         console.log('Headers:', this.getAllResponseHeaders());
+        //         console.log('Body:', this.responseText);
+        //     }
+        // };
+
+
+
+        // request.send(JSON.stringify(body));
+        // var data = {
+        //     'login': 'admin',
+        //     'passsword': '12345678'
+        // };
+        // $.ajax({
+        //     url: 'https://devbit.ga/api/v1/test/?apiKey=123456',
+        //     type: 'GET',
+        //     data: data,
+        //     crossDomain: true,
+        //     "headers": {
+        //         "accept": "application/json",
+        //         "Access-Control-Allow-Origin":"anonymus"
+        //     },
+        //     fail: function(response){
+        //       console.log(response);
+        //     },
+        //     success: function(response){
+        //         console.log(response);
+        //     }    
+        // });
+        // $.post( "http://devbit.ga/api/v1/auth/?apiKey=123456", function( data ) {
+        //   console.log(data);
+        // });
     })
+
+
+
 
     //переход на страницу коллекции
     $(".client-form").on('submit', function(e) {
@@ -248,7 +289,7 @@ $(function() {
     })
 
     //карточка товара > добавить числа в input
-    $(document).on("click", '.quantity__item span', function() {
+    $(document).on("click", '.input-block span', function() {
         let inputValue = $(this).siblings('input').val();
         if ($(this).hasClass('plus')) {
             inputValue++;
@@ -263,7 +304,7 @@ $(function() {
         }
     })
     //Запрет ввода "руками" отрицательных значений в поле input
-    $("body").delegate('.quantity__item input', 'focusout', function() {
+    $("body").delegate('.input-block input', 'focusout', function() {
         if ($(this).val() < 0) {
             $(this).val('0');
         }
@@ -378,7 +419,7 @@ $(function() {
             $(".main-menu.show").removeClass('show');
             $(".burger").removeClass('cross');
         }
-        
+
     });
 
 });
